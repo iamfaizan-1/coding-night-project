@@ -1,0 +1,50 @@
+
+    :root{
+        --primary: #0d6efd;
+    }
+/* 
+    body{
+        background-color: #0d6efd !important;
+    } */
+    
+    
+    body.dark { background:#121212; color:white; }
+    body.dark .card { background:#1e1e1e; color:white; }
+    .pointer { cursor:pointer; }
+    .post-img { max-width:100%; border-radius:10px; margin-top:10px; }
+
+    .navbar{
+        background-color: var(--primary) !important;
+    }
+
+    .night
+    {
+        border-color: var(--primary);
+        border-width: 5px;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+
+    #logoutBtn{
+        background-color: var(--primary)    !important;
+        color: white;
+    }
+
+    #logoutBtn:hover{
+
+        background-color: white !important;
+        color: var(--primary);
+    }
+    .image{
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+    }
+
+    .user{
+        color: var(--primary);
+    }
+    .usermain h4{
+margin-bottom: 40px;
+    }
+
