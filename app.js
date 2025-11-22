@@ -1,3 +1,6 @@
+
+
+
 let posts = JSON.parse(localStorage.getItem("posts") || "[]");
 let currentEditId = null;
 
@@ -22,10 +25,17 @@ function renderPosts(){
           <small>${p.time}</small>
         </div>
         ${p.img ? `<img src="${p.img}" class='post-img'>` : ''}
-        <div class="d-flex mt-2 gap-3">
-          <span class="pointer text-danger" onclick="toggleLike(${p.id})">❤️ ${p.likes}</span>
-          <span class="pointer text-primary" onclick="openEdit(${p.id})">✏️ Edit</span>
-          <span class="pointer text-danger" onclick="deletePost(${p.id})">🗑 Delete</span>
+        <div class="d-flex mt-4 justify-content-between">
+          <span class="pointer text-danger" onclick="toggleLike(${p.id})">
+          <i class="fa-solid fa-heart"></i>
+          ${p.likes}</span>
+        <div class = "d-flex gap-4" >
+  <span class="pointer text-primary" onclick="openEdit(${p.id})">
+  <i class="fa-regular fa-pen-to-square"></i> Edit</span>
+          <span class="pointer text-danger" onclick="deletePost(${p.id})">
+        <i class="fa-solid fa-trash"></i>
+          Delete</span>
+        </div>
         </div>
       </div>`;
   });
@@ -111,6 +121,14 @@ loginBtn.onclick = ()=>{
     usernameText.innerText = u.name;
     renderPosts();
   }else{
-    alert("Invalid Login");
+    
+Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "Something went wrong!",
+  footer: '<a href="#">Why do I have this issue?</a>'
+});
+
+
   }
 };

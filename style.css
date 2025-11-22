@@ -1,11 +1,18 @@
 
+*{
+    font-family: sans-serif;
+}
     :root{
-        --primary: #0d6efd;
+        --primary: #0073B1;
     }
 /* 
     body{
         background-color: #0d6efd !important;
     } */
+
+    body{
+        background-color: #F0F2F5;
+    }
     
     
     body.dark { background:#121212; color:white; }
@@ -28,6 +35,7 @@
     #logoutBtn{
         background-color: var(--primary)    !important;
         color: white;
+        font-weight: bold;
     }
 
     #logoutBtn:hover{
@@ -48,3 +56,27 @@
 margin-bottom: 40px;
     }
 
+    .heading4{
+        font-weight: bold;
+    }
+
+    #loginBtn{
+        background-color: #0073B1;
+        color: white;
+    }
+
+    #postBtn{
+        background-color: #0073B1;
+        color: white;
+    }
+h4{
+    font-weight: bold;
+}
+
+input{
+    border: grey;
+}
+
+.usermain{
+    padding: 0px 250px;
+}
